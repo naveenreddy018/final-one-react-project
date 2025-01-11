@@ -1,0 +1,123 @@
+.modal-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+}
+
+.modal-dialog {
+  width: 100%;
+  max-width: 500px;
+  background-color: #1f1f1f;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222222;
+  padding: 15px 20px;
+  border-radius: 20px;
+  border-bottom: 2px solid #6200ea;
+  width: 100%;
+}
+
+.modal-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.modal-header button {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-header button:hover {
+  color: #f39c12;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px 0;
+  width: 100%;
+}
+
+.form-control {
+  font-size: 1rem;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #555555;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.form-control:focus {
+  background-color: #444444;
+  border-color: #6200ea;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  width: 100%;
+}
+
+.modal-footer button {
+  padding: 12px 25px;
+  border-radius: 30px;
+  background-color: #6200ea;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-footer button:hover {
+  background-color: #3700b3;
+}
+
+.user-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 15px;
+}
+
+.user-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-dialog {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.modal-container.show .modal-dialog {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 90%;
+  }
+}
