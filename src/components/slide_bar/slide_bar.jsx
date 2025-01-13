@@ -6,7 +6,7 @@ import { recent_context } from '../context/cont.jsx';
 import { Array } from '../reponse_bar/response.jsx';
 
 
-function SlideBar() {
+function Slide_Bar() {
   const [menu, setMenu] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const { Recent_items } = useContext(recent_context)
@@ -130,5 +130,5 @@ function SlideBar() {
   );
 }
 
-export default SlideBar;
+export default Slide_Bar;
 

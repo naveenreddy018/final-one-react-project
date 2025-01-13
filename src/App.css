@@ -1,7 +1,43 @@
-.app-container{
+/* Global Reset and Layout */
+
+.app-container1{
   min-height: 100vh;
   display: flex;
   width: 100%
 }
 
-@
+
+
+
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar li {
+    margin-bottom: 10px;
+  }
+
+  .navbar li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.navbar-nav{
+  display: flex;
+  justify-content: space-between;
+
+  color: white;
+  padding: 0px 150px;
+  gap:90px;
+  align-items: center;
+}
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+} 

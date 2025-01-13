@@ -8,12 +8,12 @@
   font-family: outfit;
 }
 
-#root{
+/* #root{
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
 }
-
+ */
 
 @media (max-width:1024px) {
 

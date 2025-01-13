@@ -6,11 +6,11 @@ import "./response.css"
 import TypingEffect from './typingeffect';
 import { recent_context } from '../context/cont';
 import FormModal from './modal';
+import { Link } from 'react-router-dom';
 // import  SpeechRecognition ,{ useSpeechRecognition } from 'react-speech-recognition';
 
 export const Array = []
 const input_value = (name) => {
-
     Array.push(name)
 }
 
@@ -30,7 +30,7 @@ function Response_Bar() {
         const fetch_data = async () => {
 
             try {
-                const res = await fetch("http://localhost:3004/prompt", {
+                const res = await fetch("http://localhost:3001/prompt", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -87,7 +87,7 @@ function Response_Bar() {
                             backgroundColor : toggle ? "black" : "white",
                            color: toggle ? "white" : "black"
                         }} onClick={Handle_toggle} >
-                            {toggle ? "Light" : "Dark"}
+                            <Link to="/">Home</Link>
                         </button>
                         {/* <ImageComponent 
                          src="https://cdn-icons-png.flaticon.com/512/5720/5720465.png"
